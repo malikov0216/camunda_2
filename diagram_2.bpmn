@@ -8,6 +8,13 @@
       <bpmn:incoming>SequenceFlow_0krrqs8</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="SequenceFlow_0krrqs8" sourceRef="StartEvent_1" targetRef="EndEvent_12nn6f9" />
+    <bpmn:startEvent id="StartEvent_0hvpq62">
+      <bpmn:outgoing>SequenceFlow_0xpblc1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="EndEvent_0rnh5mq">
+      <bpmn:incoming>SequenceFlow_0xpblc1</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0xpblc1" sourceRef="StartEvent_0hvpq62" targetRef="EndEvent_0rnh5mq" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1q2occ3">
@@ -20,6 +27,16 @@
       <bpmndi:BPMNEdge id="SequenceFlow_0krrqs8_di" bpmnElement="SequenceFlow_0krrqs8">
         <di:waypoint x="197" y="117" />
         <di:waypoint x="197" y="226" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="StartEvent_0hvpq62_di" bpmnElement="StartEvent_0hvpq62">
+        <dc:Bounds x="324" y="81" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0rnh5mq_di" bpmnElement="EndEvent_0rnh5mq">
+        <dc:Bounds x="324" y="226" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0xpblc1_di" bpmnElement="SequenceFlow_0xpblc1">
+        <di:waypoint x="342" y="117" />
+        <di:waypoint x="342" y="226" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
