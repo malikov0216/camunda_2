@@ -3,6 +3,7 @@
   <bpmn:process id="Process_1q2occ3" isExecutable="true">
     <bpmn:startEvent id="StartEvent_1">
       <bpmn:outgoing>SequenceFlow_0krrqs8</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_138utod</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:endEvent id="EndEvent_12nn6f9">
       <bpmn:incoming>SequenceFlow_0krrqs8</bpmn:incoming>
@@ -17,11 +18,18 @@
     <bpmn:sequenceFlow id="SequenceFlow_0xpblc1" sourceRef="StartEvent_0hvpq62" targetRef="EndEvent_0rnh5mq" />
     <bpmn:startEvent id="StartEvent_1bdp17h">
       <bpmn:outgoing>SequenceFlow_0c6lx6c</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_0gisz98</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:endEvent id="EndEvent_0hlr6vk">
       <bpmn:incoming>SequenceFlow_0c6lx6c</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="SequenceFlow_0c6lx6c" sourceRef="StartEvent_1bdp17h" targetRef="EndEvent_0hlr6vk" />
+    <bpmn:exclusiveGateway id="ExclusiveGateway_1ww26g3">
+      <bpmn:incoming>SequenceFlow_138utod</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0gisz98</bpmn:incoming>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_138utod" sourceRef="StartEvent_1" targetRef="ExclusiveGateway_1ww26g3" />
+    <bpmn:sequenceFlow id="SequenceFlow_0gisz98" sourceRef="StartEvent_1bdp17h" targetRef="ExclusiveGateway_1ww26g3" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1q2occ3">
@@ -54,6 +62,19 @@
       <bpmndi:BPMNEdge id="SequenceFlow_0c6lx6c_di" bpmnElement="SequenceFlow_0c6lx6c">
         <di:waypoint x="485" y="117" />
         <di:waypoint x="485" y="226" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ExclusiveGateway_1ww26g3_di" bpmnElement="ExclusiveGateway_1ww26g3" isMarkerVisible="true">
+        <dc:Bounds x="317" y="352" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_138utod_di" bpmnElement="SequenceFlow_138utod">
+        <di:waypoint x="215" y="99" />
+        <di:waypoint x="342" y="99" />
+        <di:waypoint x="342" y="352" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0gisz98_di" bpmnElement="SequenceFlow_0gisz98">
+        <di:waypoint x="467" y="99" />
+        <di:waypoint x="342" y="99" />
+        <di:waypoint x="342" y="352" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
